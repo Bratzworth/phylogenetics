@@ -1,0 +1,27 @@
+calculate likelihood using GPU
+    -execute ML using serial method, just speed up likelihood calc step?
+
+determine size of tree to see performance increase
+
+benchmark code
+    -see % of time to run certain functions
+
+if doing work on GPU -> have to seek help elsewhere 
+other forms of paralellization possible besides GPU
+    -performance increase still exists
+    -shared memory across CPU
+    
+I NEED DATA!!! 
+    -simulating data
+        -erin has code
+    -gathering data from internet
+    
+test how much changing one part of a tree affects the overall likelihood
+
+
+test to make sure my likelihood kernel is working
+    simulate data
+    
+add to code:
+    -write likelihood profile before / after for each node with a change
+    -change conditions for the updating of node likelihood profiles

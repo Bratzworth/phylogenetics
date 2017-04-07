@@ -1,0 +1,46 @@
+#include <iostream>
+#include <cmath>
+#include <stack>
+using namespace std;
+
+
+struct node
+{
+	string name;
+	//a=0, c=1, t=2, g=3
+	double *L_vals;
+	//branch length
+	double blen;
+	int hits = 0;
+
+	node(string n,double blen_in, double l1, double l2, double l3, double l4) : blen(blen_in),
+		left(NULL), right(NULL), name(n)
+	{
+    	L_vals = new double[4];
+    	L_vals[0]=l1;
+	    L_vals[1]=l2;
+    	L_vals[2]=l3;
+  		L_vals[3]=l4;
+	}
+	node(double blen_in, node *left_in, node *right_in) : blen(blen_in), left(left_in),
+ 		right(right_in), L_vals(NULL)
+	{/*empty*/}
+  
+	~node()
+	{
+		delete[] L_vals;
+	}
+	node *left;
+	node *right;
+};
+
+void print_newick(node* root);
+
+double pij_JC(double branchLen, int ltr1, int ltr2);
+
+double calc_likelihood_i(node* leaf, double* base_freq);
+
+double* calc_likelihood_r(node *leaf);
+
+double calc_likelihood_r(node *leaf, double *base_freq);
+

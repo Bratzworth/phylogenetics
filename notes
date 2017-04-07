@@ -1,0 +1,54 @@
+google test - > make a test case?
+
+
+/*done with this section
+juke-cantor
+generalized time reversible(gtr) < most used
+
+
+try using this for probij instead:
+
+change code for JC matrix
+| 3/4 -1/4 -1/4 -1/4 |
+|-1/4  3/4 -1/4 -1/4 |
+|-1/4 -1/4  3/4 -1/4 |
+|-1/4 -1/4 -1/4  3/4 |
+
+Pij(v) = 1/4 + 3/4e^-(4/3*branchLen) if i=j
+         1/4 - 1/4e^-(4/3*branchLen) else
+  rate assumed to be 1/4 ^ 
+
+instead of recursion, post order traversal
+    -inc efficiency? 
+*/
+
+
+-become more familiar with stacks
+    -reading in newick strings
+    -good for interviews ( :^) )
+
+for n leaf tree -> n-3 internal branch
+    internal branches dictate the splits
+
+test all tree combinations for maximum likelihood
+
+n is a bigger cost than l(number of nucleobases)
+this lab mostly does gene trees (l is between 300-1500) <- relatively small
+
+excersize: 
+
+n=5, l=30, how many floating point operations?
+
+maybe try to make tree work for l>1?
+
+figure out actually maximizing likelihood now that we have the function
+
+likelihood is only a comparitive score
+
+good question: is it possible to split tree into smaller tres-> maximize likelihood on subtree -> use subtree as leaf on larger tree
+    -divide and conquer method
+    
+2 BIG THINGS:
+    -organizing code
+    -organizing notes
+
